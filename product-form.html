@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie  blank-false " lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js  blank-false " lang="en-US">
+<!--<![endif]-->
+<head>
+<!-- META TAGS -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- LINK TAGS -->
+<link rel="pingback" href="xmlrpc.html" />
+<title>Explore - IDEA UX</title>
+
+
+<link rel='stylesheet' href='css/settings.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/dynamic-styles.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/icomoon.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/header-im.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/js_composer.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/header-black.css' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CMontserrat:300,400,500,600,700%7COpen+Sans:300,400,600,700,700i,800&amp;subset=latin-ext" rel="stylesheet">
+
+<link rel="icon" href="upload/cropped-apple_favicon-90x90.png" sizes="32x32" />
+<link rel="icon" href="upload/cropped-apple_favicon-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="upload/cropped-apple_favicon-300x300.png" />
+<style type="text/css">
+.flash {
+display: block;
+position: fixed;
+top: 115px;
+right: 25px;
+width: 350px;
+padding: 20px 25px 20px 85px;
+font-size: 16px;
+font-weight: 400;
+color: #4d4d4d;
+background-color: #FFF;
+border: 2px solid #F0634C;
+border-radius: 2px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+opacity: 0;
+}
+
+.flash__icon {
+position: absolute;
+top: 50%;
+left: 0;
+width: 1.8em;
+height: 100%;
+padding: 0 0.4em;
+background-color: #F0634C;
+color: #FFF;
+font-size: 36px;
+font-weight: 300;
+transform: translate(0, -50%);
+}
+.flash__icon .icon {
+position: absolute;
+top: 50%;
+left: 20%;
+transform: translate(0, -50%);
+}
+
+
+
+@-webkit-keyframes drop-in-fade-out {
+0% {
+opacity: 0;
+visibility: visible;
+-webkit-transform: translate3d(0, -200%, 0);
+-moz-transform: translate3d(0, -200%, 0);
+-ms-transform: translate3d(0, -200%, 0);
+-o-transform: translate3d(0, -200%, 0);
+transform: translate3d(0, -200%, 0);
+}
+12% {
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+20% {
+opacity: 1;
+}
+70% {
+opacity: 1;
+visibility: visible;
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+80% {
+opacity: 0;
+}
+100% {
+visibility: hidden;
+-webkit-transform: translate3d(75%, 0, 0);
+-moz-transform: translate3d(75%, 0, 0);
+-ms-transform: translate3d(75%, 0, 0);
+-o-transform: translate3d(75%, 0, 0);
+transform: translate3d(25%, 0, 0);
+}
+}
+@-moz-keyframes drop-in-fade-out {
+0% {
+opacity: 0;
+visibility: visible;
+-webkit-transform: translate3d(0, -200%, 0);
+-moz-transform: translate3d(0, -200%, 0);
+-ms-transform: translate3d(0, -200%, 0);
+-o-transform: translate3d(0, -200%, 0);
+transform: translate3d(0, -200%, 0);
+}
+12% {
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+20% {
+opacity: 1;
+}
+70% {
+opacity: 1;
+visibility: visible;
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+80% {
+opacity: 0;
+}
+100% {
+visibility: hidden;
+-webkit-transform: translate3d(75%, 0, 0);
+-moz-transform: translate3d(75%, 0, 0);
+-ms-transform: translate3d(75%, 0, 0);
+-o-transform: translate3d(75%, 0, 0);
+transform: translate3d(25%, 0, 0);
+}
+}
+@-o-keyframes drop-in-fade-out {
+0% {
+opacity: 0;
+visibility: visible;
+-webkit-transform: translate3d(0, -200%, 0);
+-moz-transform: translate3d(0, -200%, 0);
+-ms-transform: translate3d(0, -200%, 0);
+-o-transform: translate3d(0, -200%, 0);
+transform: translate3d(0, -200%, 0);
+}
+12% {
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+20% {
+opacity: 1;
+}
+70% {
+opacity: 1;
+visibility: visible;
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+80% {
+opacity: 0;
+}
+100% {
+visibility: hidden;
+-webkit-transform: translate3d(75%, 0, 0);
+-moz-transform: translate3d(75%, 0, 0);
+-ms-transform: translate3d(75%, 0, 0);
+-o-transform: translate3d(75%, 0, 0);
+transform: translate3d(25%, 0, 0);
+}
+}
+@keyframes drop-in-fade-out {
+0% {
+opacity: 0;
+visibility: visible;
+-webkit-transform: translate3d(0, -200%, 0);
+-moz-transform: translate3d(0, -200%, 0);
+-ms-transform: translate3d(0, -200%, 0);
+-o-transform: translate3d(0, -200%, 0);
+transform: translate3d(0, -200%, 0);
+}
+12% {
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+20% {
+opacity: 1;
+}
+70% {
+opacity: 1;
+visibility: visible;
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+80% {
+opacity: 0;
+}
+100% {
+visibility: hidden;
+-webkit-transform: translate3d(75%, 0, 0);
+-moz-transform: translate3d(75%, 0, 0);
+-ms-transform: translate3d(75%, 0, 0);
+-o-transform: translate3d(75%, 0, 0);
+transform: translate3d(25%, 0, 0);
+}
+}
+.animate--drop-in-fade-out {
+-webkit-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+-moz-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+-ms-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+-o-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+}
+
+</style>
+</head>
+
+<body class="home page page-id-5737 page-template page-template-page-vc page-template-page-vc-php wpb-js-composer js-comp-ver-4.12 vc_responsive ">
+<!-- general wrap start -->
+<div id="gen-wrap">
+
+
+<div class='site-widget-area widget-area'>
+<div class="mob-sidebar-toggle2"></div>
+<div class="custom-scroll-bar">
+<div id="nav_menu-2" class="widget widget_nav_menu">
+<div class="menu-sidebar-menu-container">
+<ul id="menu-sidebar-menu" class="menu">
+<li class="menu-item"><a href="#">Get started</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+<div class="site-overlay">&nbsp;</div>
+
+
+<!-- wrap start -->
+<div id="wrap" class="nz-wide">
+
+<header class="header mob-header cart-true nz-clearfix">
+<div class="mob-header-top nz-clearfix">
+<div class="container">
+<div class="logo logo-mob">
+<a href="home.html" title="Montserrat" style="color: #F0634C;font-weight: bold;font-size:30px;">
+<!--                                    <img id="img_dca7_0" src="upload/logo_black%402.png" alt="Montserrat">-->
+IDEA
+</a>
+</div>
+<span class="mob-sidebar-toggle"></span>
+
+</div>
+</div>
+
+</header>
+<header class="header desk version1 page-title-section-version1 one-page-side stuck-true stuck-boxed-false top-false full-width-true sl-true search-true cart-true sidebar-toggle-true iversion-dark effect-fill hover-effect-fill megamenu-hover-effect-underline subeffect-ghost fixed-true fiversion-dark wiversion-light">
+
+<div class="header-content">
+
+<div class="header-body">
+<div class="container nz-clearfix">
+
+<div class="logo logo-desk">
+<a href="home.html" title="Montserrat" style="color: #F0634C;font-weight: bold;font-size:30px;">
+<!--                                        <img class="normal-logo" id="img_dca7_1" src="upload/logo%402.png" alt="Montserrat">
+<img class="fixed-logo" id="img_dca7_2" src="upload/logo_black%402.png" alt="Montserrat">-->
+IDEA
+</a>
+</div>
+
+<div class="search-toggle-wrap">
+<div class="search-toggle"></div>
+<div class="search">
+<form action="#" method="get">
+<fieldset>
+<input type="text" name="s" placeholder="Search for..." value="Search for..." />
+<input type="submit"  value="Search" />
+</fieldset>
+</form>
+</div>
+</div>
+
+
+<nav class="header-menu desk-menu nz-clearfix">
+<ul  class="menu">
+<li class="menu-item" data-mm="false" data-mmc="2"><a href="get-started.html"><span class="mi"></span><span class="txt">Get started</span><span class="di icon-arrow-right9"></span></a></li>
+<li class="menu-item" data-mm="false" data-mmc="2"><a href="explore.html"><span class="mi"></span><span class="txt">Explore</span><span class="di icon-arrow-right9"></span></a></li>
+
+</ul>
+</nav>
+</div>
+</div>
+
+</div>
+</header>
+<div class="page-content-wrap">
+<!-- content start -->
+<div id="nz-content" class='content nz-clearfix padding-false'>
+<div class='container page-full-width'>
+<!-- post start -->
+<div id="post-7" class="post-7 page type-page status-publish hentry">
+<section class="page-content nz-clearfix">
+
+
+
+
+<div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_6a2e_0">
+
+<div class="container">
+
+<div class="breadcumb" style="padding: 20px 0;">
+<span><a href="home.html">IDEA</a></span>/
+<span><a href="explore.html">EXPLORE</a></span>/
+<span><a href="get-accredited.html">ENTERPRISE</a></span>/
+<span>CREATE PRODUCT</span>
+
+</div>
+
+<div class="head vc_col-sm-12 col12" style="float: left;width: 100%;">
+<h3 style="float: left;width: 100%;">Product Detail Form</h3>
+<label style="float: left;width: 100%;">Lorem ipsum cupcake</label>
+</div>
+
+</div>
+</div>
+
+
+
+
+<div class="page-content-wrap">
+
+<!-- content start -->
+<div id="nz-content" class='content nz-clearfix padding-false'>
+<div class='container page-full-width'>
+<!-- post start -->
+<div id="post-3172" class="post-3172 page type-page status-publish hentry">
+<section class="page-content nz-clearfix">
+
+    <div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_5c14_3">
+        <div class="container">
+            <div class="nz-row">
+                <div class="col vc_col-lg-offset-2 vc_col-sm-12 vc_col-lg-8 vc_col-md-8 vc_col-xs-12 col12  element-animate-false valign-top"  data-effect="none" data-align="center">
+                    <div class="col-inner" >
+
+                        <div role="form" class="wpcf7" id="wpcf7-f6-p3172-o1" lang="en-US" dir="ltr">
+                            <div class="screen-reader-response"></div>
+                            <form id="profile-form" action="#">
+                            <p><span class="wpcf7-form-control-wrap your-name">
+                                        <label class=" control-label col-sm-2 required" for="Organization_title">Organization <span class="required">*</span></label>
+                                        <input name="organization" id="organization" type="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Organization" /></span> </p>
+                                <p><span class="wpcf7-form-control-wrap your-name">
+                                        <label class=" control-label col-sm-2 required" for="Organization_title">Title <span class="required">*</span></label>
+                                        <input name="title" id="title" type="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Title" /></span> </p>
+                                <p><span class="wpcf7-form-control-wrap your-email">
+                                        <label class=" control-label col-sm-2 required" for="prod-description">Description <span class="required">*</span></label>
+                                        <textarea type="text" placeholder=""></textarea>
+                                       </span> </p>
+                                <p><span class="wpcf7-form-control-wrap your-name">
+                                        <label class=" control-label col-sm-2 required" for="prod-type">Type <span class="required">*</span></label>
+                                        <select name="input_12" id="input_30_12" class="medium gfield_select" tabindex="7" aria-required="true" aria-invalid="false"><option value="Please Select">Please Select</option><option value="Product">Product</option><option value="Service">Service</option></select></span> </p>
+                                <p><span class="wpcf7-form-control-wrap your-name">
+                                        <label class=" control-label col-sm-2 required" for="Organization_title">Company Number <span class="required">*</span></label>
+                                        <input name="name" id="name" type="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Company Registration No." /></span> </p>
+                                         <p><span class="wpcf7-form-control-wrap your-name">
+                                        <label class=" control-label col-sm-2 required" for="Organization_title">Cover Image <span class="required">*</span></label>
+                                        <input name="Organization[imageFile_logo]" id="Organization_imageFile_logo" type="file"></span> </p>
+                                   <p><span class="wpcf7-form-control-wrap your-name">
+                                        <label class=" control-label col-sm-2 required" for="Organization_title">Website URL <span class="required">*</span></label>
+                                        <input name="title" id="title" type="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Website URL" /></span> </p>
+                                    <br>
+                                <div  class="nz-column-text nz-clearfix no-padding element-animate-false" data-effect="none" data-effect-speed="50">
+                                    <p id="p_801f_2"><span id="span_801f_14">Cupcake ipsum dolor sit amet macaroon cupcake carrot cake oat cake. Tiramisu donut powder jelly jellt-o lemon drops biscuit muffin toffee. Cupcake ipsum dolor sit amet macaroon cupcake carrot cake oat cake. Tiramisu donut powder jelly jellt-o lemon drops biscuit muffin toffee</span></p>
+                                    <p>
+                                </div> <br><br>
+                                 <a class="button button-normal default full-false medium square animate-false anim-type-ghost hover-fill element-animate-false" href="thank-you.html" target="_self" data-effect="none"><span class="txt">CREATE PRODUCT</span>&nbsp;</a>
+                                <div class="flash">
+                                    <div class="flash__icon">
+                                        <i class="icon fa fa-check-circle-o"></i>
+                                    </div>
+                                    <p class="flash__body">
+                                        Sent! <br> Status : <strong>Pending</strong>
+                                    </p>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+</div>
+<!-- post end -->
+</div>
+</div>
+<!-- content end -->
+
+
+<!--
+<div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_801f_13" style="padding-top: 0;">
+<div class="container">
+<div class="nz-row">
+<div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-2 vc_col-xs-12 col12  element-animate-false valign-top"  data-effect="none" data-align="center" data-margin="false">
+<div class="col-inner" ></div>
+</div>
+<div class="col vc_col-sm-12 vc_col-lg-6 vc_col-md-8 vc_col-xs-12 col12  element-animate-false valign-top"  data-effect="none" data-align="left" data-margin="false">
+<div class="col-inner" >
+<h3 id="h3_801f_1" class="vc_custom_heading ninzio-latter-spacing">TESTIMONIALS</h3>
+<div class="sep-wrap element-animate element-animate-false center nz-clearfix" data-effect="none">
+<div class="nz-separator solid" id="div_801f_14">&nbsp;</div>
+</div>
+<div  class="nz-column-text nz-clearfix no-padding element-animate-false" data-effect="none" data-effect-speed="50">
+
+<p id="p_801f_1"><span id="span_801f_14">TAP INTO THE COMMUNITY OF ENTERPRISES AND SUPPORTIVE PARTNERS</span></p>
+
+</div>
+</div>
+</div>
+<div class="col vc_col-sm-12 vc_col-lg-3 vc_col-md-2 vc_col-xs-12 col12  element-animate-false valign-top"  data-effect="none" data-align="left" data-margin="false">
+<div class="col-inner" ></div>
+</div>
+</div>
+</div>
+</div> -->
+<!--
+<div class="nz-section horizontal autoheight-false animate-false full-width-false " data-animation-speed="35000" data-parallax="false" id="div_801f_15">
+<div class="container">
+<div class="nz-row">
+<div class="col vc_col-sm-12 col12  element-animate-false valign-top"  data-effect="none" data-align="left">
+<div class="col-inner" >
+<div id="nz-testimonials-1" data-autoplay="true" data-columns="3" class="none nz-testimonials lazy">
+<div class="testimonial">
+<div class="test-wrap nz-clearfix"><img src="upload/testimonials1.png" alt="Michael Smart">
+<div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.
+</div>
+<div class="test-data"><span class="name">Michael Smart</span><span class="title">Repairing Manager</span></div>
+</div>
+</div>
+<div class="testimonial">
+<div class="test-wrap nz-clearfix"><img src="upload/testimonials2.png" alt="Alexander Brown">
+<div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</div>
+<div class="test-data"><span class="name">Alexander Brown</span><span class="title">Repairing Manager</span></div>
+</div>
+</div>
+<div class="testimonial">
+<div class="test-wrap nz-clearfix"><img src="upload/testimonials3.png" alt="Barbara Mcdoe">
+<div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</div>
+<div class="test-data"><span class="name">Barbara Mcdoe</span><span class="title">Web Designer</span></div>
+</div>
+</div>
+<div class="testimonial">
+<div class="test-wrap nz-clearfix"><img src="upload/testimonials4.png" alt="Ani Mcdoe">
+<div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</div>
+<div class="test-data"><span class="name">Ani Mcdoe</span><span class="title">Web Designer</span></div>
+</div>
+</div>
+<div class="testimonial">
+<div class="test-wrap nz-clearfix"><img src="upload/testimonials5.png" alt="Ina Mcdoe">
+<div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</div>
+<div class="test-data"><span class="name">Ina Mcdoe</span><span class="title">Web Developer</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+
+
+<div class="nz-section horizontal autoheight-false animate-false full-width-true " data-animation-speed="35000" data-parallax="false" >
+<div class="nz-row">
+<div class="col vc_col-sm-12 col12  element-animate-false valign-top"  data-effect="none" data-align="right" data-margin="false">
+<div class="col-inner" >
+<div id="nz-tagline-1"  class="nz-tagline">
+    <div class="container nz-clearfix">
+        <span  style="float: right;" class="tagline-title">Contact us at : <a style="color:#fff;"href="mailto:idea@mymagic.my">idea@mymagic.my</a></span>
+        
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+</div>
+<!-- post end -->
+</div>
+</div>
+<!-- content end -->
+<!-- footer start -->
+<footer class='footer'>
+<!--                        <div class="footer_info">
+<div class="container">
+<div class="logo">
+IDEA
+</div>
+<div>
+<ul class="info">
+<li>Block 3730 Persiaran APEC 63000 Cyberjaya Malaysia</li>
+<li><a href="#">enquiries@mymagic.my</a></li>
+<li>+60 3 8324 4800</li>
+</ul>
+<ul class="social">
+<li><a href="#"><i class="icon-facebook"></i></a></li>
+<li><a href="#"><i class="icon-twitter"></i></a></li>
+<li><a href="#"><i class="icon-instagram"></i></a></li>
+<li><a href="#"><i class="icon-youtube"></i></a></li>
+<li><a href="#"><i class="icon-linkedin"></i></a></li>
+</ul>
+</div>
+</div>
+</div>-->
+
+<div class="footer-wa nz-clearfix">
+<div class="container">
+<aside class="footer-widget-area widget-area nz-clearfix">
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">IDEA</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Home</a></li>
+<li><a href="#">Our Mandate</a></li>
+<li><a href="#">Our Team</a></li>
+<li><a href="#">Community</a></li>
+<li><a href="#">Programs</a></li>
+<li><a href="#">Events</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Jobs</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">Academy</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Courses</a></li>
+<li><a href="#">Symposium</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">Accelerator</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">GAP</a></li>
+<li><a href="#">Distro Dojo</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">Global</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Ideas</a></li>
+<li><a href="#">Programs with standard</a></li>
+<li><a href="#">Regional Conference</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">Central</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Resource Tool</a></li>
+<li><a href="#">Q&A Forum</a></li>
+<li><a href="#">Appointment</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">SE</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Publications</a></li>
+<li><a href="#">Ventures</a></li>
+<li><a href="#">Academy</a></li>
+<li><a href="#">Community</a></li>
+<li><a href="#">The Team</a></li>
+<li><a href="#">Amplify Awards</a></li>
+<li><a href="#">SE Fellowship</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="clearfix visible-sm-block visible-md-block" style="clear: both;"></div>
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">ACE</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Services</a></li>
+<li><a href="#">ASEAN Startup Ecosystem</a></li>
+<li><a href="#">Contact ACE</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text">
+<h6 class="widget_title">Impact</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Year One Review</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text" style="float: right;">
+<h6 class="widget_title">Site</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Terms of Use</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text" style="float: right;">
+<h6 class="widget_title">Tools</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Startup DB</a></li>
+<li><a href="#">JomStartup</a></li>
+<li><a href="#">Profile</a></li>
+<li><a href="#">ATAS</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="text-3" class="widget widget_text" style="float: right;">
+<h6 class="widget_title">My Account</h6>
+<div class="textwidget">
+<div class="nz-clearfix">
+<ul id="ul_801f_0">
+<li><a href="#">Login</a></li>
+<li><a href="#">Register</a></li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<div class="footer-info-area nz-clearfix">
+<div class="container">
+<div class="footer-copyright nz-clearfix">
+<span id="span_801f_18">IDEA  ©  2017 All Rights Reserved</span>
+</div>
+</div>
+</div>
+
+</footer>
+<!-- footer end -->
+</div>
+</div>
+<!-- wrap end -->
+</div>
+<a id="top" href="#wrap"></a>
+
+<!-- general wrap end -->
+<script type='text/javascript' src='js/jquery/jquery.js'></script>
+<script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
+<script type='text/javascript' src='js/woocommerce.min.js'></script>
+<script type='text/javascript' src='js/smoothscroll.js'></script>
+<script type='text/javascript' src='js/isotope.pkgd.min.js'></script>
+<script type='text/javascript' src='js/plugins.js'></script>
+<script type='text/javascript' src='js/controller.js'></script>
+
+<script type='text/javascript' src='js/contact-form.js'></script>
+<script type='text/javascript' src='js/js_composer_front.min.js'></script>
+
+<script type='text/javascript' src='js/jquery.themepunch.tools.min.js'></script>
+<script type='text/javascript' src='js/jquery.themepunch.revolution.min.js'></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="js/extensions/revolution.extension.video.min.js"></script>
+
+<script type="text/javascript">
+$("#submit_accr").click(function () {
+$(".flash").addClass("animate--drop-in-fade-out");
+setTimeout(function () {
+$(".flash").removeClass("animate--drop-in-fade-out");
+}, 3500);
+});
+</script>
+<script type="text/javascript">
+/******************************************
+-   PREPARE PLACEHOLDER FOR SLIDER  -
+******************************************/
+
+var setREVStartSize = function () {
+try {
+var e = new Object,
+i = jQuery(window).width(),
+t = 9999,
+r = 0,
+n = 0,
+l = 0,
+f = 0,
+s = 0,
+h = 0;
+e.c = jQuery('#rev_slider_6_1');
+e.responsiveLevels = [1240, 1024, 778, 480];
+e.gridwidth = [1170, 960, 720, 440];
+e.gridheight = [600, 600, 600, 400];
+
+e.sliderLayout = "auto";
+if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+}), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+var u = (e.c.width(), jQuery(window).height());
+if (void 0 != e.fullScreenOffsetContainer) {
+var c = e.fullScreenOffsetContainer.split(",");
+if (c)
+jQuery.each(c, function (e, i) {
+u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+}), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+}
+f = u
+} else
+void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+e.c.closest(".rev_slider_wrapper").css({
+height: f
+})
+
+} catch (d) {
+console.log("Failure at Presize of Slider:" + d)
+}
+};
+
+setREVStartSize();
+
+var tpj = jQuery;
+
+var revapi6;
+tpj(document).ready(function () {
+if (tpj("#rev_slider_6_1").revolution == undefined) {
+revslider_showDoubleJqueryError("#rev_slider_6_1");
+} else {
+revapi6 = tpj("#rev_slider_6_1").show().revolution({
+sliderType: "standard",
+jsFileLocation: "//ninzio.com/montserrat/wp-content/plugins/revslider/public/assets/js/",
+sliderLayout: "auto",
+dottedOverlay: "none",
+delay: 9000,
+navigation: {
+keyboardNavigation: "off",
+keyboard_direction: "horizontal",
+mouseScrollNavigation: "off",
+mouseScrollReverse: "default",
+onHoverStop: "off",
+touch: {
+touchenabled: "on",
+swipe_threshold: 75,
+swipe_min_touches: 50,
+swipe_direction: "horizontal",
+drag_block_vertical: false
+},
+bullets: {
+enable: true,
+hide_onmobile: true,
+hide_under: 600,
+style: "custom",
+hide_onleave: true,
+hide_delay: 200,
+hide_delay_mobile: 1200,
+direction: "horizontal",
+h_align: "center",
+v_align: "bottom",
+h_offset: 0,
+v_offset: 30,
+space: 5,
+tmp: ''
+}
+},
+responsiveLevels: [1240, 1024, 778, 480],
+visibilityLevels: [1240, 1024, 778, 480],
+gridwidth: [1170, 960, 720, 440],
+gridheight: [600, 600, 600, 400],
+lazyType: "smart",
+parallax: {
+type: "mouse",
+origo: "slidercenter",
+speed: 2000,
+levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 55, 60, 65, 70, 75, 55],
+type: "mouse",
+},
+shadow: 0,
+spinner: "off",
+stopLoop: "off",
+stopAfterLoops: -1,
+stopAtSlide: -1,
+shuffle: "off",
+autoHeight: "off",
+hideThumbsOnMobile: "off",
+hideSliderAtLimit: 0,
+hideCaptionAtLimit: 0,
+hideAllCaptionAtLilmit: 0,
+debugMode: false,
+fallbacks: {
+simplifyAll: "off",
+nextSlideOnWindowFocus: "off",
+disableFocusListener: false,
+}
+});
+}
+}); /*ready*/
+</script>
+
+</body>
+</html>
